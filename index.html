@@ -17,8 +17,13 @@
       }
     </style>
   </head>
-  <body>
+  <body style="display: flex; flex-direction: column; gap: 20px">
     <canvas id="gameCanvas" width="200" height="200"></canvas>
+    <section style="display: flex; gap: 10px; margin-top: 20px">
+      <button id="idleButton">Idle</button>
+      <button id="walkButton">Walk</button>
+      <button id="runButton">Run</button>
+    </section>
     <script>
       const game = {
         isRunning: true,
@@ -66,6 +71,21 @@
 
       window.addEventListener("load", () => {
         game.init();
+      });
+
+      const idleButton = document.getElementById("idleButton");
+      idleButton.addEventListener("click", () => {
+        game.sonic.idle();
+      });
+
+      const walkButton = document.getElementById("walkButton");
+      walkButton.addEventListener("click", () => {
+        game.sonic.walk();
+      });
+
+      const runButton = document.getElementById("runButton");
+      runButton.addEventListener("click", () => {
+        game.sonic.run();
       });
     </script>
   </body>
