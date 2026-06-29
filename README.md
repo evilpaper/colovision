@@ -11,7 +11,15 @@ bun install
 2. Start the application:
 
 ```bash
-bun run index.ts
+bun run start
+```
+
+## Local Development
+
+When doing local decelopment you probably want soft reloads when imported files change. Thus run in "dev" mode:
+
+```bash
+bun run dev
 ```
 
 ## Tech Stack
